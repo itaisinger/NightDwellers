@@ -1,0 +1,18 @@
+{
+  "option_operagx_version": "0.0.0.4",
+  "option_operagx_next_version": "0.0.0.5",
+  "option_operagx_game_name": "Night Dwellers",
+  "option_operagx_interpolate_pixels": true,
+  "option_operagx_scale": 0,
+  "option_operagx_texture_page": "2048x2048",
+  "option_operagx_display_cursor": true,
+  "option_operagx_guid": "37d600a2-2e50-4720-bc01-0928fcf1195a",
+  "option_operagx_team_name": "itaisinger studio",
+  "option_operagx_editUrl": "https://dc.gxc.gg/home/games/game/37d600a2-2e50-4720-bc01-0928fcf1195a/edit",
+  "option_operagx_internalShareUrl": "https://gxc.gg/game/37d600a2-2e50-4720-bc01-0928fcf1195a?track=03db5951-55dc-43bd-a105-c7f11b9ed2cb",
+  "option_operagx_publicShareUrl": "https://gxc.gg/game/37d600a2-2e50-4720-bc01-0928fcf1195a?track=03db5951-55dc-43bd-a105-c7f11b9ed2cb",
+  "resourceVersion": "1.0",
+  "name": "operagx",
+  "tags": [],
+  "resourceType": "GMOperaGXOptions",
+}

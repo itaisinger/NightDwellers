@@ -1,0 +1,10 @@
+state machine:
+
+natural
+	if press direction
+		trans to run
+	if press jump
+		trans to attack1
+		
+		
+xp syte.

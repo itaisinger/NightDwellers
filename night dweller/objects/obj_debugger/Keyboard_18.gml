@@ -1,0 +1,1 @@
+//obj_game.time_elapsed += 50;

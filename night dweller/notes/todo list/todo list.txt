@@ -1,0 +1,116 @@
+//todo
+make cones detection system - work on cyclop fly not doing anything might be spd stuff.
+make more enemies
+make xp
+
+player character
+	- basic movement system
+	- momentum system
+	- hitbox system
+	- potion system
+	
+enemies
+
+map\world
+
+items\collectables
+
+menu
+
+obj game
+	- pause
+
+must have
+	- pause
+	- depth
+	- score
+	- goblin instant damage fix
+
+shuold have
+	- enemy detection delay
+	- enemy size
+	- mushroom projectile
+	- xp vanish effect
+	- dmg numbers
+	
+could have
+	- player squish in direction of input
+	- player eyes move in direction of input
+	- ledge grab
+	- cyclop not going through walls
+	- more player air attacks
+	- more cyclop attacks
+	
+	
+/////////// enemy logic /////////
+enemies attack the player either by bumping into them or with attacks. 
+if things go well and attacks and hitboxes are well used, remove bumping damage.
+
+// enemy parent object
+has a few universal functions:
+	hit
+	die
+	
+and a few stats:
+	hp
+	collide damage
+
+// enemy objects
+each has its own state machine and behaviour.
+
+
+////// enemy spawning logic ////
+create a obj_spawner. it will have a few var definition:
+	enemy type		which enemy to spawn
+	interval		wait time between spawns. -1 to spawn once.
+	start level		from which night to start spawning
+	spawn chance	the chance for the spawn to not do anything this night
+	
+then manually place a bunch around the map. or just outside passing through walls the player cant.
+
+
+///// exp system ////
+
+obj_game has a vars xp_current, xp_required.
+xp_required starts at 100.
+
+obj_xp_gem exists. on collide with player, call obj_game.add_xp(xp_amount).
+there will be 2 (or 3) xp sizes.
+
+there is a obj_xp_spawner that spawns xp when obj_game calls start_day();
+	
+	
+	
+///////// day/night system /////////
+
+obj game has vars: time_elapsed, max_time[<max day time>,<max night time>] and game_state = <0/1>, true means night.
+enum TIME{day,night}
+
+in step event obj_game count time_elapsed and when time_elapsed >= max_time[game_state] then call switch_game_state():
+	game_state = !game_state
+	
+	if day
+		spawn xp
+		despawn monsters
+	else
+		despawn xp
+		activate monster spawners
+	
+	change bg
+	change music
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
